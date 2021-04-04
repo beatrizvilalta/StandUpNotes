@@ -1,4 +1,7 @@
-require 'tty-prompt'
+# frozen_string_literal: true
 
-prompt = TTY::Prompt.new
-puts "Is the note for today?"
+require 'pry'
+require_relative '../view/header'
+
+date = HeaderView.choose_date
+puts date
