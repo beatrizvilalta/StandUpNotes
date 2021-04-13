@@ -2,6 +2,7 @@
 
 require 'tty-prompt'
 require 'date'
+require 'pry'
 
 # this class shows the header view content
 class HeaderView
@@ -19,8 +20,16 @@ class HeaderView
     elsif answer == choices[1]
       puts 'What date is the note for? '
       date = gets.chomp
-      date = Date.parse(date)
-      date.strftime('%b %d')
+
+      begin
+        date = Date.parse(date)
+        date.strftime('%b %d')
+      rescue Date::Error => e
+        message = 'Invalid date format'
+        puts message
+        message
+      end
+
     end
   end
 end
