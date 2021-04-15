@@ -1,12 +1,11 @@
-# frozen-string
+# frozen_string_literal: true
+
 require 'date'
 require 'spec_helper'
 require_relative '../view/header'
 
 describe HeaderView do
-
   describe '.choose_date' do
-
     let(:prompt) { double }
     let(:result) { described_class.choose_date }
 
@@ -18,7 +17,6 @@ describe HeaderView do
     end
 
     context 'when choose Yes' do
-
       let(:answer) { 'Yes' }
       let(:set_up_action) {}
 
