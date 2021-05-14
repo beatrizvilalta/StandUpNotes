@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "tty-prompt"
-gem "rubocop"
+gem 'pry'
+gem 'rspec'
+gem 'rubocop'
+gem 'tty-prompt'
